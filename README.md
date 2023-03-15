@@ -1,5 +1,5 @@
 # How to Use it
-- words.txt has all the 9000 words that appear in General IELTS listening and reading
+- words.txt has all the 9000 words that appear in General IELTS(10-16) listening and reading
 - so only review these words is enough
 
 # Facts about All IELTS Words

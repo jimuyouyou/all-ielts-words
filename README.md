@@ -16,3 +16,10 @@
 - node index.js
 - words.txt contains all valid word bigger than 2 characters(lowercase)
 - outliers.txt contains all invalid word
+
+# Couch DB (root 123456)
+- http://localhost:5984/_utils/
+- [https://pouchdb.com/guides/setup-couchdb.html](https://pouchdb.com/guides/setup-couchdb.html)
+
+# UI Dev
+- npm start

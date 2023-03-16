@@ -30,7 +30,6 @@ async function process() {
     for (let j = 0; j < words.length; j++) {
       const word = words[j].trim();
       if (/^[a-z]{3,}$/.test(word)) {
-        all.add(word);
         allReadings.add(word);
       } else {
         outs.add(word);
@@ -38,11 +37,8 @@ async function process() {
     }
   }
 
-  const data = Array.from(all).sort();
-  await fs.writeFile('./words.txt', data.join('\n'));
-
-  const dataOut = Array.from(outs).sort();
-  await fs.writeFile('./outliers.txt', dataOut.join('\n'));
+  const data = Array.from(new Set([...all, ...allReadings])).sort();
+  await fs.writeFile('./allWords.txt', data.join('\n'));
 
   const dataReadings = [];
   for (let word of allReadings) {
@@ -50,8 +46,11 @@ async function process() {
       dataReadings.push(word);
     }
   }
-  console.log(dataReadings.join(','));
+  const readingOnly = Array.from(dataReadings).sort();
+  await fs.writeFile('./readingOnly.txt', readingOnly.join('\n'));
 
+  const dataOut = Array.from(outs).sort();
+  await fs.writeFile('./outliers.txt', dataOut.join('\n'));
 }
 
 process();

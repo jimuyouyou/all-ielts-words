@@ -1,5 +1,6 @@
 # How to Use it
-- words.txt has all the 9000 words that appear in General IELTS(10-16) listening and reading
+- allWords.txt has all the 9000 words that appear in General IELTS(10-16) listening and reading
+- readingOnly.txt has all the words that hasn't appear in Listening part
 - so only review these words is enough
 
 # Facts about All IELTS Words

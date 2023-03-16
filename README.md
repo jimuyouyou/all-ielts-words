@@ -19,7 +19,7 @@
 
 # Couch DB (root 123456)
 - http://localhost:5984/_utils/
-- [https://pouchdb.com/guides/setup-couchdb.html](https://pouchdb.com/guides/setup-couchdb.html)
+- [https://pouchdb.com/api.html](https://pouchdb.com/guides/setup-couchdb.html)
 
 # UI Dev
 - npm start

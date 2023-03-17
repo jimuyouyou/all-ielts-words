@@ -12,26 +12,26 @@
 
 .list-groups {
   display: flex;
-  border : 1px solid green;
+  border : 1px solid gray;
 }
 
 .tag-wrapper {
   flex-grow  : 1;
-  border     : 1px solid green;
+  border     : 1px solid gray;
   width      : 100px;
   font-weight: bold;
 }
 
 .groups-wrapper {
   flex-grow: 10;
-  border   : 1px solid green;
+  border   : 1px solid gray;
   display  : flex;
 }
 
 
 .group-wrapper {
   width : 33%;
-  border: 1px solid green;
+  border: 1px solid gray;
 }
 
 .group-wrapper textarea {

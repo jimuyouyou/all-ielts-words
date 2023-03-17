@@ -78,7 +78,7 @@ function App() {
         {allData && allData.map((dt, dtInd) => {
 
           return (
-            <div key={dt._id} className='list-groups'>
+            <div key={dt._id} className='list-groups' tabindex="0" >
               <div className='tag-wrapper'>{dt.tag}</div>
               <div className='groups-wrapper'>
                 {dt.list && dt.list.map((group, groupInd) => {

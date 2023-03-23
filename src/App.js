@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { getAll, upsert } from './db.js';
+import { getAll, upsert, remove } from './db.js';
 
 
 function App() {
@@ -15,12 +15,13 @@ function App() {
   const handleCreate = async () => {
     const dbText = text.trim();
     console.log('dbText', dbText);
+
     if (dbText) {
       const hasOne = allData.find(d => d.tag === dbText);
       if (!hasOne) {
         const clone = allData.slice();
         clone.unshift({
-          _id: dbText,
+          _id: `${new Date().getTime()}`,
           tag: dbText,
           list: ['', '', ''],
         });
@@ -29,12 +30,47 @@ function App() {
     }
   };
 
+
+  const handleTagChange = async (id, val) => {
+    // if (!val) return;
+
+    console.log('handleTagChange', [id, val]);
+    const clone = allData.slice();
+    const doc = clone.find(it => it._id === id);
+    if (doc) {
+      if (!doc.oldTag) doc.oldTag = doc.tag;
+      doc.tag = val;
+      setAllData(clone);
+    }
+  };
+
+  const handleTagBlur = async (id) => {
+    const doc = allData.find(it => it._id === id);
+    const { tag, oldTag } = doc;
+    if (oldTag) {
+      // delete old tag data
+      Object.assign(doc, { tag: oldTag });
+      delete doc.oldTag;
+      await remove(doc);
+
+      // add new tag data
+      const newDoc = Object.assign({}, doc, { tag, _id: `${new Date().getTime()}` });
+      delete newDoc._rev;
+      await upsert(newDoc);
+
+      // fetch all
+      const data = await getAll();
+      console.log('handleTagBlur data', data);
+      setAllData(data);
+    }
+  };
+
   const handleGroupChange = async (id, val, groupInd) => {
     console.log('handleGroupChange', [id, val, groupInd]);
     const clone = allData.slice();
-    const group = clone.find(it => it._id === id);
-    if (group) {
-      group.list[groupInd] = val;
+    const doc = clone.find(it => it._id === id);
+    if (doc) {
+      doc.list[groupInd] = val;
       setAllData(clone);
     }
   };
@@ -78,8 +114,13 @@ function App() {
         {allData && allData.map((dt, dtInd) => {
 
           return (
-            <div key={dt._id} className='list-groups' tabindex="0" >
-              <div className='tag-wrapper'>{dt.tag}</div>
+            <div key={dt._id} className='list-groups' >
+              <div className='tag-wrapper'>
+                <input type="text" value={dt.tag}
+                  onChange={(e) => handleTagChange(dt._id, e.target.value)}
+                  onBlur={(e) => handleTagBlur(dt._id)}
+                />
+              </div>
               <div className='groups-wrapper'>
                 {dt.list && dt.list.map((group, groupInd) => {
 

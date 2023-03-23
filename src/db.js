@@ -18,8 +18,17 @@ export async function getAll() {
 
 export async function upsert(doc) {
   try {
-    await db.put(doc);
+    await db.put(doc, { force: true });
   } catch (e) {
     console.log('upsert failed: ', e);
+  }
+}
+
+export async function remove(doc) {
+  try {
+    const dbDoc = await db.get(doc._id);
+    if (dbDoc) await db.remove(dbDoc);
+  } catch (e) {
+    console.log('remove failed: ', e);
   }
 }

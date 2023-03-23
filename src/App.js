@@ -2,12 +2,30 @@ import { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { getAll, upsert, remove } from './db.js';
+import tests from './tests.json';
+
+function getSentences(text) {
+  if (!text) return [];
+
+  const res = [];
+  tests.forEach(test => {
+    test.paragraph.forEach(p => {
+      if (p.includes(text)) {
+        res.push({ name: test.name, paragraph: p });
+      }
+    });
+  });
+
+  return res;
+}
+
 
 
 function App() {
+  const [test, setTest] = useState('');
   const [text, setText] = useState('');
   const [allData, setAllData] = useState([]);
-  
+
   const handleText = (e) => {
     setText(e.target.value);
   };
@@ -84,18 +102,37 @@ function App() {
     setAllData(data);
   };
 
+  const handleTestToggle = (testName) => {
+    if (test) {
+      setTest('');
+    } else {
+      setTest(tests.find(t => t.name === testName).paragraph.join('<br/>'));
+    }
+  };
+
+  // init data
   useEffect(() => {
     async function fetchAll() {
       const data = await getAll();
-      console.log('init data', data);
+      // console.log('init data', data);
       setAllData(data);
     };
 
     fetchAll();
   }, []);
 
-  console.log('alldata', allData);
+  // update window search
+  useEffect(() => {
+    if (text && text.length > 3) {
+      
+    }
+  }, [text]);
+
+  // console.log('alldata', allData);
+  // console.log('tests', tests);
+
   const showData = text ? allData.filter(dt => dt.tag.toLowerCase().includes(text.toLowerCase())) : allData;
+  const showSentences = (text && text.length > 3) ? getSentences(text) : [];
 
   return (
     <div className="App">
@@ -139,6 +176,30 @@ function App() {
           )
         }
         )}
+      </div>
+
+      <div className='sentences-wrapper' id="searchedSentences">
+        {showSentences && showSentences.map((ss, tsInd) => {
+          return (
+            <div key={tsInd} className='sent-wrapper' title={ss.name}>
+              {ss.paragraph}
+            </div>
+          )
+        })}
+      </div>
+
+      <div className='tests-wrapper'>
+        {!text && tests && tests.map((ts, tsInd) => {
+
+          return (
+            <div key={ts.name} className='test'>
+              <button onClick={() => handleTestToggle(ts.name)}>{ts.name}</button>
+            </div>
+          )
+        })}
+      </div>
+      <div className='test-panel'>
+        {!text && <div dangerouslySetInnerHTML={{ __html: test }} />}
       </div>
     </div>
   );

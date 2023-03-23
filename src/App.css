@@ -42,3 +42,22 @@
 .group-wrapper textarea:focus {
   height: 200px;
 }
+
+.tests-wrapper {
+  margin-top: 30px;
+  display   : flex;
+  flex-wrap : wrap;
+}
+
+.tests-wrapper .test {
+  min-width: 80px;
+}
+
+.tests-wrapper .test button {
+  min-width: 70px;
+}
+
+.sent-wrapper {
+  margin-top: 10px;
+  cursor    : pointer;
+}

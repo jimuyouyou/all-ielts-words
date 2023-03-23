@@ -1,4 +1,4 @@
-# How to Use it
+# All IELTS General Words
 - allWords.txt has all the 9000 words that appear in General IELTS(10-16) listening and reading
 - listeningOnly.txt has all the 5700 words that hasn't appear in Listening part
 - readingOnly.txt has all the 3000 words that hasn't appear in Listening part
@@ -14,11 +14,12 @@
 
 # Dev 
 - update any files inside data folder
-- node index.js
+- node index.js to compute words
 - words.txt contains all valid word bigger than 2 characters(lowercase)
 - outliers.txt contains all invalid word
 
 # Couch DB (root 123456)
+- install [couchdb](https://pouchdb.com/guides/setup-couchdb.html)
 - http://localhost:5984/_utils/
 - [https://pouchdb.com/api.html](https://pouchdb.com/guides/setup-couchdb.html)
 

@@ -5,6 +5,7 @@ const dataPath = './data/listening';
 const readingPath = './data/reading';
 
 async function process() {
+  const tests = [];
   const all = new Set();
   const outs = new Set();
   const allReadings = new Set();
@@ -12,6 +13,10 @@ async function process() {
   let files = await fs.readdir(dataPath);
   for (let i = 0; i < files.length; i++) {
     const content = await fs.readFile(path.join(dataPath, files[i]), 'utf-8');
+    tests.push({
+      name: `LS/${path.parse(files[i]).name}`,
+      paragraph: content.split(/(?:\r\n|\r|\n)/g).filter(s => s.trim().length > 2)
+    });
     const words = content.replace(/(?:\r\n|\r|\n)/g, ' ').split(/[ \:!\)\(\.\?\-;\,'‘’“”]/);
     for (let j = 0; j < words.length; j++) {
       const word = words[j].trim();
@@ -26,6 +31,10 @@ async function process() {
   files = await fs.readdir(readingPath);
   for (let i = 0; i < files.length; i++) {
     const content = await fs.readFile(path.join(readingPath, files[i]), 'utf-8');
+    tests.push({
+      name: `RE/${path.parse(files[i]).name}`,
+      paragraph: content.split(/(?:\r\n|\r|\n)/g).filter(s => s.trim().length > 2)
+    });
     const words = content.replace(/(?:\r\n|\r|\n)/g, ' ').split(/[ \:!\)\(\.\?\-;\,'‘’“”]/);
     for (let j = 0; j < words.length; j++) {
       const word = words[j].trim();
@@ -36,6 +45,8 @@ async function process() {
       }
     }
   }
+
+  await fs.writeFile('./src/tests.json', JSON.stringify(tests));
 
   const data = Array.from(new Set([...all, ...allReadings])).sort();
   await fs.writeFile('./allWords.txt', data.join('\n'));

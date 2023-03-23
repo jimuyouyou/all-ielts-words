@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { getAll, upsert, remove } from './db.js';
 import tests from './tests.json';
+import { Hilitor } from './Hiltor';
 
 function getSentences(text) {
   if (!text) return [];
@@ -18,7 +19,6 @@ function getSentences(text) {
 
   return res;
 }
-
 
 
 function App() {
@@ -124,7 +124,9 @@ function App() {
   // update window search
   useEffect(() => {
     if (text && text.length > 3) {
-      
+      var myHilitor = new Hilitor("searchedSentences")
+      myHilitor.setMatchType("open"); // id of the element to parse
+      myHilitor.apply(text);
     }
   }, [text]);
 

@@ -40,6 +40,10 @@ async function process() {
   const data = Array.from(new Set([...all, ...allReadings])).sort();
   await fs.writeFile('./allWords.txt', data.join('\n'));
 
+
+  const listeningOnly = Array.from(all).sort();
+  await fs.writeFile('./listeningOnly.txt', listeningOnly.join('\n'));
+
   const dataReadings = [];
   for (let word of allReadings) {
     if (!all.has(word)) {

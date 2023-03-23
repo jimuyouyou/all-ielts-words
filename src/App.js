@@ -21,7 +21,7 @@ function App() {
       if (!hasOne) {
         const clone = allData.slice();
         clone.unshift({
-          _id: `${new Date().getTime()}`,
+          _id: dbText,
           tag: dbText,
           list: ['', '', ''],
         });
@@ -32,7 +32,7 @@ function App() {
 
 
   const handleTagChange = async (id, val) => {
-    // if (!val) return;
+    if (!val) return;
 
     console.log('handleTagChange', [id, val]);
     const clone = allData.slice();
@@ -54,7 +54,7 @@ function App() {
       await remove(doc);
 
       // add new tag data
-      const newDoc = Object.assign({}, doc, { tag, _id: `${new Date().getTime()}` });
+      const newDoc = Object.assign({}, doc, { tag, _id: tag });
       delete newDoc._rev;
       await upsert(newDoc);
 

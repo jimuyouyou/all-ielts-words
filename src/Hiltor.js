@@ -55,7 +55,7 @@ export function Hilitor(id, tag) {
 
   this.setRegex = function (input) {
     input = input.replace(endRegExp, "");
-    input = input.replace(breakRegExp, "|");
+    // input = input.replace(breakRegExp, "|");
     input = input.replace(/^\||\|$/g, "");
     if (input) {
       var re = "(" + input + ")";

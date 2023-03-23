@@ -7,7 +7,7 @@ import { getAll, upsert, remove } from './db.js';
 function App() {
   const [text, setText] = useState('');
   const [allData, setAllData] = useState([]);
-
+  
   const handleText = (e) => {
     setText(e.target.value);
   };
@@ -95,6 +95,7 @@ function App() {
   }, []);
 
   console.log('alldata', allData);
+  const showData = text ? allData.filter(dt => dt.tag.toLowerCase().includes(text.toLowerCase())) : allData;
 
   return (
     <div className="App">
@@ -111,7 +112,7 @@ function App() {
       </div>
 
       <div className='list-wrapper'>
-        {allData && allData.map((dt, dtInd) => {
+        {showData && showData.map((dt, dtInd) => {
 
           return (
             <div key={dt._id} className='list-groups' >

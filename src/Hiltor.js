@@ -12,8 +12,8 @@ export function Hilitor(id, tag) {
   var wordColor = [];
   var colorIdx = 0;
   var matchRegExp = "";
-  var openLeft = false;
-  var openRight = false;
+  // var openLeft = false;
+  // var openRight = false;
 
   // characters to strip from start and end of the input string
   var endRegExp = new RegExp('^[^\\w]+|[^\\w]+$', "g");
@@ -88,7 +88,7 @@ export function Hilitor(id, tag) {
       for (var i = 0; i < node.childNodes.length; i++)
         this.hiliteWords(node.childNodes[i]);
     }
-    if (node.nodeType == 3) { // NODE_TEXT
+    if (node.nodeType === 3) { // NODE_TEXT
 
       var nv, regs;
 

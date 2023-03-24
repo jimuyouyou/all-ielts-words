@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import { getAll, upsert, remove } from './db.js';
 import tests from './tests.json';
@@ -10,9 +10,9 @@ function getSentences(text) {
 
   const res = [];
   tests.forEach(test => {
-    test.paragraph.forEach(p => {
+    test.paragraph.forEach((p, pInd) => {
       if (p.includes(text)) {
-        res.push({ name: test.name, paragraph: p });
+        res.push({ name: test.name, paragraph: p, pInd});
       }
     });
   });
@@ -183,8 +183,8 @@ function App() {
       <div className='sentences-wrapper' id="searchedSentences">
         {showSentences && showSentences.map((ss, tsInd) => {
           return (
-            <div key={tsInd} className='sent-wrapper' title={ss.name}>
-              {ss.paragraph}
+            <div key={ss.name + ss.pInd} className='sent-wrapper' title={ss.name}>
+              {ss.paragraph} ({ss.name})
             </div>
           )
         })}

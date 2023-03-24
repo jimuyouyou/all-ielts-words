@@ -9,6 +9,7 @@ async function process() {
   const all = new Set();
   const outs = new Set();
   const allReadings = new Set();
+  const freq = {};
 
   let files = await fs.readdir(dataPath);
   for (let i = 0; i < files.length; i++) {
@@ -22,6 +23,7 @@ async function process() {
       const word = words[j].trim();
       if (/^[a-z]{3,}$/.test(word)) {
         all.add(word);
+        freq[word] = (freq[word] || 0) + 1;
       } else {
         outs.add(word);
       }
@@ -30,6 +32,7 @@ async function process() {
 
   files = await fs.readdir(readingPath);
   for (let i = 0; i < files.length; i++) {
+    const fq = new Set();
     const content = await fs.readFile(path.join(readingPath, files[i]), 'utf-8');
     tests.push({
       name: `RE/${path.parse(files[i]).name}`,
@@ -40,6 +43,7 @@ async function process() {
       const word = words[j].trim();
       if (/^[a-z]{3,}$/.test(word)) {
         allReadings.add(word);
+        freq[word] = (freq[word] || 0) + 1;
       } else {
         outs.add(word);
       }
@@ -49,8 +53,16 @@ async function process() {
   await fs.writeFile('./src/tests.json', JSON.stringify(tests));
 
   const data = Array.from(new Set([...all, ...allReadings])).sort();
+  console.log('allWords', data.length);
   await fs.writeFile('./allWords.txt', data.join('\n'));
 
+  const keyData = data.filter(it => freq[it] > 1);
+  console.log('keyData', keyData.length);
+  await fs.writeFile('./allKeyWords.txt', keyData.join('\n'));
+
+  const trivalData = data.filter(it => freq[it] <= 1);
+  console.log('trivalData', trivalData.length);
+  await fs.writeFile('./allTrivalWords.txt', trivalData.join('\n'));
 
   const listeningOnly = Array.from(all).sort();
   await fs.writeFile('./listeningOnly.txt', listeningOnly.join('\n'));
@@ -66,6 +78,8 @@ async function process() {
 
   const dataOut = Array.from(outs).sort();
   await fs.writeFile('./outliers.txt', dataOut.join('\n'));
+
+
 }
 
 process();

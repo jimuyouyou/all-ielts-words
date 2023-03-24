@@ -32,7 +32,7 @@ function App() {
 
   const handleCreate = async () => {
     const dbText = text.trim();
-    console.log('dbText', dbText);
+    // console.log('dbText', dbText);
 
     if (dbText) {
       const hasOne = allData.find(d => d.tag === dbText);
@@ -52,7 +52,7 @@ function App() {
   const handleTagChange = async (id, val) => {
     if (!val) return;
 
-    console.log('handleTagChange', [id, val]);
+    // console.log('handleTagChange', [id, val]);
     const clone = allData.slice();
     const doc = clone.find(it => it._id === id);
     if (doc) {
@@ -78,13 +78,13 @@ function App() {
 
       // fetch all
       const data = await getAll();
-      console.log('handleTagBlur data', data);
+      // console.log('handleTagBlur data', data);
       setAllData(data);
     }
   };
 
   const handleGroupChange = async (id, val, groupInd) => {
-    console.log('handleGroupChange', [id, val, groupInd]);
+    // console.log('handleGroupChange', [id, val, groupInd]);
     const clone = allData.slice();
     const doc = clone.find(it => it._id === id);
     if (doc) {
@@ -98,7 +98,7 @@ function App() {
     await upsert(doc);
 
     const data = await getAll();
-    console.log('updated data', data);
+    // console.log('updated data', data);
     setAllData(data);
   };
 

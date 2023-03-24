@@ -1,7 +1,7 @@
 # All IELTS General Words
 - allWords.txt has all the 9000 words that appear in General IELTS(10-16) listening and reading
-- allKeyWords.txt has all the 5000 words that appear in more than one test of General IELTS(10-16) listening and reading
-- allTrivalWords.txt has all the 4000 words that appear in only one test of General IELTS(10-16) listening and reading
+- allKeyWords.txt has all the 5300 words that appear in more than once of General IELTS(10-16) listening and reading
+- allTrivalWords.txt has all the 3500 words that appear in only once of General IELTS(10-16) listening and reading
 - listeningOnly.txt has all the 5700 words that hasn't appear in Listening part
 - readingOnly.txt has all the 3000 words that hasn't appear in Listening part
 - so only review these words is enough

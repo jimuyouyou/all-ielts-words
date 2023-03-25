@@ -4,16 +4,40 @@ const path = require('path');
 const dataPath = './data/listening';
 const readingPath = './data/reading';
 
+function processGroup(freqGroup, content) {
+  const arr = [];
+
+  const sentences = content.replace(/(?:\r\n|\r|\n)/g, ' ').split(/[\:!\.\?\)\(;\-–&\,“”\d]/);
+  sentences.forEach(sent => {
+    for (let i = 0; i < 10; i++) arr[i] = [];
+    const words = sent.split(/\s+/);
+    words.forEach(word => {
+      for (let i = 0; i < 10; i++) {
+        const wd = word.trim();
+        if (wd.length > 0) arr[i].push(wd);
+        if (arr[i].length > i + 2) {
+          arr[i].shift();
+          const key = arr[i].join(' ');
+          // console.log('key', arr[i]);
+          freqGroup[key] = (freqGroup[key] || 0) + 1;
+        }
+      }
+    });
+  });
+}
+
 async function process() {
   const tests = [];
   const all = new Set();
   const outs = new Set();
   const allReadings = new Set();
   const freq = {};
+  const freqGroup = {};
 
   let files = await fs.readdir(dataPath);
   for (let i = 0; i < files.length; i++) {
     const content = await fs.readFile(path.join(dataPath, files[i]), 'utf-8');
+    processGroup(freqGroup, content);
     tests.push({
       name: `LS/${path.parse(files[i]).name}`,
       paragraph: content.split(/(?:\r\n|\r|\n)/g).filter(s => s.trim().length > 2)
@@ -32,8 +56,8 @@ async function process() {
 
   files = await fs.readdir(readingPath);
   for (let i = 0; i < files.length; i++) {
-    const fq = new Set();
     const content = await fs.readFile(path.join(readingPath, files[i]), 'utf-8');
+    processGroup(freqGroup, content);
     tests.push({
       name: `RE/${path.parse(files[i]).name}`,
       paragraph: content.split(/(?:\r\n|\r|\n)/g).filter(s => s.trim().length > 2)
@@ -79,6 +103,9 @@ async function process() {
   const dataOut = Array.from(outs).sort();
   await fs.writeFile('./outliers.txt', dataOut.join('\n'));
 
+  const groupData = Object.keys(freqGroup).filter(it => freqGroup[it] >= 5).sort();
+  console.log('groupData', groupData.length);
+  await fs.writeFile('./allWordGroups.txt', groupData.join('\n'));
 
 }
 

@@ -4,6 +4,7 @@
 - allTrivalWords.txt has all the 3500 words that appear in only once of General IELTS(10-16) listening and reading
 - listeningOnly.txt has all the 5700 words that hasn't appear in Listening part
 - readingOnly.txt has all the 3000 words that hasn't appear in Listening part
+- allWordGroups.txt has all word groups that appear more than 5 times
 - so only review these words is enough
 
 # Facts about All IELTS Words

@@ -1,0 +1,1462 @@
+unable  able
+below  above
+absent  present
+decline refuse  accept
+deny reject  admit
+fail  achieve
+disagree  agree
+alive  dead
+together  along
+always  never
+ancient  modern
+hard  soft
+leave  arrive
+descend  acsend
+attack  defend
+awake  asleep
+beautiful  ugly
+best  worst
+birth  death
+bitter  sweet
+interesting  boring
+start  finish
+begin  end
+careful  careless
+expensive  cheap
+cheerful  sad
+chilly  warm
+discomfort  comfort
+incomplete  complete
+complex  simple
+crazy  sane
+create  destroy
+bright light  dark
+dawn  sunset
+difficult  easy
+downwards  upwards
+wet  dry
+dusk  dawn
+exit  enter
+bored  excited
+exhale  inhale
+exterior  interior
+external  internal
+rise  fall
+forgive  blame
+forward  backward
+funny  sad
+giant  tiny
+receive  give
+healthy  sic
+heaven  hell
+lose  win
+heavy  light
+identical  different
+decrease  increase
+laugh  cry
+diligent  lazy
+illegal  legal
+dislike  like
+unlock  lock
+quiet  loud
+major  minor
+tough  easy
+marry  divorce
+immature  mature
+maximum  minimum
+melt  freeze
+night  day
+noisy  quiet
+impatient  patient
+plural  singular
+rude impolite  polite
+impossible  possible
+irregular  regular
+irrelevant  relevant
+risky dangerous  safe
+satisfied  dissatisfied
+seller  buyer
+married  single
+marry divorce
+night day
+friend enemy
+bravery cowardice
+lack abundance
+afraid fearless
+angel devil
+comedy tragedy
+adult child
+entrance exit
+absent absence present presence
+birth death
+dawn dusk sunset
+exit enter
+heaven hell
+courage timidity
+arrival departure
+land sea
+gentleman lady
+peace war
+city village suburb
+victory defeat
+mountain valley
+life death
+unity division
+giant dwarf
+failure success
+host guest visitor
+illness health
+daughter son
+master servant
+order mess
+midnight noon
+ancestor descendant
+floor ceiling
+nephew niece
+wedding divorce
+marriage separation
+sunrise sunset
+construction destruction
+cellar attic
+danger safety
+opponent ally
+misery happiness
+encourage discourage
+trouble calm
+slavery freedom
+fiction fact
+grief joy
+traitor loyal
+ugliness beauty
+democracy dictatorship
+separation union
+heartbreak relief
+wealth poverty
+winner loser
+predator prey
+king queen
+scarce plenty
+hero villain
+body spirit
+supporter opponent
+praise criticism
+virtue vice
+zenith nadir
+
+invite evict
+appear vanish
+divide unite
+defy obey
+praise punish
+bless curse
+expand contract
+throw catch
+smile frown
+sink float
+glorify dishonor
+stabilize upset
+exacerbate pacify
+hit miss
+notice ignore
+conceal reveal
+whisper scream
+reduce increase
+rise sink
+calm disorder
+trust doubt
+delay hurry
+supply demand
+despair hope
+protect attack
+lose find
+win lose
+follow lead
+waste save
+collect offer
+love loathe
+harvest plant
+raise lower
+disagree agree
+decline refuse accept
+deny reject admit
+fail achieve
+leave arrive
+descend ascend
+attack defend
+create destroy
+start begin finish end
+exhale inhale
+rise fall
+forgive blame
+receive give
+lose win
+decrease increase
+laugh cry
+dislike like
+unlock lock
+quiet loud
+major minor
+tough easy
+melt freeze
+immigrate emigrate
+include exclude
+export import
+break repair
+add subtract
+enjoy dislike
+love hate
+lend borrow
+give take
+allow forbid
+ascend descend
+agree refuse
+build destroy
+catch miss
+amuse annoy
+
+rapid slow
+mortal immortal
+risky safe
+regular irregular
+colorful dull
+tough tender
+dull radiant
+transparent opaque
+hungry satisfied
+lovely disgusting
+terrible wonderful
+polluted pure
+hard soft
+beautiful ugly
+best worst
+harmful harmless
+vast tiny
+special general
+neat messy
+negative affirmative
+lawful illicit
+common rare unique
+total partial
+strong frail
+insufficient abundant
+capable disable
+tight loose
+holy evil
+vague clear
+dumb clever
+shaky firm
+free restricted
+known unknown
+zealous indifferent
+native foreign
+robust weak
+yuck yummy
+fake real
+straight bent
+deep shallow
+sick healthy
+horizontal vertical
+distant close
+humane wicked
+whole part
+separate connected
+rude courteous
+clockwise anticlockwise
+drunk sober
+rainy sunny
+interested indifferent
+domestic wild
+clean dirty
+flat steep
+rough smooth
+weak powerful
+foreign local
+cruel kind
+gentle violent
+fresh stale
+large tiny
+front rear
+funny serious
+future past
+vacant occupied
+general particular
+rural urban
+generous selfish
+harsh mild
+liquid solid
+cloudy sunny
+silent loud
+guilty innocent
+strict lenient
+abnormal normal
+common unusual
+unable able
+alive dead
+ancient modern
+bitter sweet
+interesting boring
+careful careless
+expensive cheap
+cheerful funny sad
+chilly warm
+discomfort comfort
+incomplete complete
+complex simple
+difficult easy
+crazy sane
+bright light dark
+wet dry
+bored boring excited interesting
+exterior external interior internal
+giant tiny
+healthy sick
+heavy light
+identical different
+dull interesting
+diligent lazy
+illegal legal
+immature mature
+maximum minimum
+noisy quiet
+impatient patient
+plural singular
+rude impolite polite
+impossible possible
+irregular regular
+irrelevant relevant
+risky dangerous safe
+satisfied dissatisfied
+married single
+artificial natural
+simple complicated
+asleep awake
+compulsory voluntary
+negative affirmative
+active dormant
+background foreground
+ugly beautiful
+intentional accidental
+lazy hardworking
+better worse
+elementary advanced
+center periphery
+similar different
+constant unsteady
+sharp blunt
+alike different
+alive dead
+moderate extreme
+wide narrow
+amateur professional
+succeed fail
+
+never seldom occasionally often always frequently 
+downwards backward upwards forward 
+certainly probably
+together alone apart
+exactly approximately
+
+rich wealthy
+quiet silent
+nice kind
+cold freezing
+smart intelligent
+short brief
+simple basic
+large huge
+good excellent
+deserted desolate
+creative innovative
+crowded bustling
+cute adorable
+dangerous threatening
+dear cherished
+realistic practical
+risky perilous
+understandable comprehensible
+confused perplexed
+depressed despondent
+detailed meticulous
+big massive
+dull boring
+deep profound
+beautiful gorgeous
+bright luminous
+accurate exact
+afraid terrified
+angry furious
+bad evil
+busy occupied
+calm serene
+careful cautious
+charmed mesmerized
+clean spotless
+clever brilliant
+colorful vibrant
+hard tedious
+eager keen
+evil wicked
+willing eager
+fancy luxurious
+far distant
+fast quick
+lucky fortunate
+friendly affectionate
+funny hilarious
+different disparate
+difficult challenging
+dry parched
+glad overjoyed
+greedy covetous
+happy ecstatic
+hard difficult
+scarce rare
+large colossal
+high soaring
+exciting exhilarating
+costly expensive
+humble courteous
+interesting fascinating
+jolly carefree
+kind considerate
+lazy indolent
+limited finite
+little tiny
+lively animated
+long extensive
+everlasting eternal
+hungry starving
+hurt battered
+important crucial
+inexpensive cheap
+loose slack
+loud deafening
+smelly pungent
+tight taunt
+smooth sleek
+soft delicate
+scary petrifying
+loved adored
+lovely stunning
+mean cruel
+messy chaotic
+much exceeding
+necessary essential
+nervous apprehensive
+noisy deafening
+painful excruciating
+pale ashen
+perfect flawless
+pleasant amiable
+poor destitute
+pretty beautiful
+strong powerful
+protective defensive
+proud noble
+many numerous
+different diverse
+often frequently
+old ancient
+open transparent
+quick rapid
+rainy pouring
+roomy spacious
+sad sorrowful
+shy timid
+skinny skeletal
+sleepy drowsy
+slow sluggish
+serious grave
+shiny glowing
+strong unyielding
+stupid idiotic
+sure certain
+talented gifted
+tall giant
+tasty delicious
+thin gaunt
+valuable precious
+hot scalding
+weak frail
+wet soaking
+tight constricting
+tired exhausted
+ugly hideous
+sorry apologetic
+special exceptional
+unhappy miserable
+upset distraught
+wicked villainous
+worried distressed
+wise sage
+excited thrilled
+tiny minuscule
+kind thoughtful
+small petite
+scary chilling
+quiet hushed
+great terrific
+fat obese
+difficult arduous
+dirty filthy
+dry arid
+easy effortless
+calm serene
+fierce ferocious
+clear obvious
+angry furious
+bad awful
+busy swamped
+valuable precious
+wise sagacious
+unhappy miserable
+bright blinding
+complete comprehensive
+basic elementary
+lively vivacious
+nearly almost
+annoying irritating
+important relevant
+passionate ardent
+fragrant aromatic
+attractive appealing
+terrible awful
+believable plausible
+favorable beneficial
+weird bizarre
+innocent blameless
+brave courageous
+relaxed comfortable
+restricted confined
+thoughtful considerate
+modern contemporary
+opposite contrary
+right correct
+misleading deceptive
+dedicated committed
+delicate fragile
+decreased diminished
+disastrous catastrophic
+showy revealing
+shameful disgracing
+selfish egocentric
+essential fundamental
+exact precise
+extra additional
+famous renowned
+foolish silly
+sly cunning
+sparkly glittering
+hard tough
+dangerous hazardous
+tired bushed
+tolerant liberal
+vital imperative
+rude impolite
+infamous notorious
+childish puerile
+inflexible rigid
+casual informal
+lonely isolated
+jealous envious
+joyful delighted
+deadly lethal
+mad insane
+cruel merciless
+gentle mild
+reduced minimized
+naked bare
+local native
+stubborn obdurate
+biological organic
+specific particular
+toxic poisonous
+urgent pressing
+immediate prompt
+wealthy affluent
+fair reasonable
+religious devout
+regretful remorseful
+isolated remote
+bad disgusting
+delicious sumptuous
+meaningful significant
+honest sincere
+moody temperamental
+touchy sensitive
+trustworthy reliable
+unusual strange
+useless vain
+decent virtuous
+popular renowned
+clean immaculate 
+great grand
+amazing astonishing
+troubling distressing
+bright incandescent
+hurt wounded
+dull boring
+dark gloomy
+little miniature
+numerous abundant
+active energetic
+true authentic
+infertile barren
+huge enormous
+funny comical
+concentrated condensed
+cool chilling
+damaged impaired
+faulty defective
+extreme extravagant
+strange eccentric
+honest candid
+thankful grateful
+charming chivalrous
+brilliant genius
+hostile antagonistic
+wet humid
+hateful loathing
+dirty filthy
+unusual extraordinary
+expensive pricey
+long extensive
+keen ardent
+impressive remarkable
+educational enlightening
+drunk intoxicated
+accurate precise
+ashamed humiliated
+solid firm
+forceful aggressive
+emotional sensitive
+frothy effervescent
+amazed shocked
+eager zealous
+fluffy feathery
+angry furious
+exciting breathtaking
+costly overpriced
+aware conscious
+fair equitable
+friendly gregarious
+loyal devoted
+frustrating exasperating
+basic rudimentary
+common typical
+full packed
+beautiful gorgeous
+clear brilliant
+fast supersonic
+logical rational
+driven ambitious
+prosperous prolific
+concerned worried
+few meager
+secure confident
+confused baffled
+corrupt fraudulent
+conscious premeditated
+creamy buttery
+constant consistent
+creepy unnerving
+much plenty
+bright intelligent
+vital crucial
+bony skeletal
+intense severe
+informal   formal 
+book reserve
+check verify
+get receive
+help assist
+need request
+deal with handle
+tell inform
+fight combat
+use consume
+start commence
+end terminate
+try endeavor
+tough difficult
+explain elucidate
+old elderly
+say express
+afraid fearful
+mad insane
+lucky fortunate
+smart intelligent
+small diminutive
+cheap inexpensive
+right correct
+away absent
+let allow
+seem appear
+climb ascend
+eager avid
+stop cease
+big enormous
+help aid
+friendly amiable
+expect anticipate
+dare challenge
+kids children
+round circular
+build construct
+hurt damage
+want desire
+lack deficiency
+show demonstrate
+brave courageous
+give donate
+remove eliminate
+imagine envisage
+avoid evade
+ease facilitate
+test experiment
+sick ill
+ask out invite
+free liberate
+bad negative
+see perceive
+happy pleased
+older senior
+use utilize
+empty vacant
+enough sufficient
+end terminate
+chance opportunity
+rich wealthy
+mend repair
+idea notion
+see observe
+maybe perhaps
+give provide supply
+free release
+choose select
+buy purchase
+mainly principally
+hungry famished
+childish immature
+sight vision
+young youthful
+get obtain
+need require
+pay back repay
+live reside
+lively energetic
+clear transparent
+block undermine
+hopeless futile
+clothes garments
+hurry haste
+better improved
+dim indistinct
+worse inferior
+kidding jesting
+funny humorous
+tired exhausted
+childish infantile
+naked nude
+stubborn obstinate
+danger peril
+let permit
+put off postpone
+here present
+keep preserve
+keep retain
+loaded rich
+sweat perspiration
+complex convoluted
+death demise
+wood timber
+describe depict
+enjoyment gratification
+dirty contaminated
+can capable
+job occupation
+boss employer
+again repeatedly
+big considerable
+marvelous exceptional
+next subsequently
+extremely 
+really
+remarkably
+seriously
+significantly
+singularly
+supremely
+terribly
+terrifically
+thoroughly
+tremendously
+truly
+uncommonly
+unusually
+vastly
+
+normally 
+almost always
+commonly
+mainly
+mostly 
+ordinarily
+usually
+consistently
+
+interesting 
+absorbing
+amusing
+captivating
+compelling
+diverting
+engaging
+engrossing
+entertaining
+enthralling
+fascinating
+gripping
+intriguing
+riveting
+striking
+
+amazing 
+astonishing
+awesome
+breathtaking
+brilliant
+extraordinary
+fabulous
+fantastic
+incredible
+marvelous
+overwhelming
+phenomenal
+prodigious
+remarkable
+significant
+
+nice 
+admirable
+amiable
+charming
+congenial
+considerate
+courteous
+delightful
+enjoyable
+gracious
+kind
+lovely
+pleasant
+pleasing
+pleasurable
+
+great 
+awesome
+excellent
+exceptional
+extraordinary
+incredible
+magnificent
+marvelous
+outstanding
+phenomenal
+spectacular
+superb
+superior
+terrific
+wonderful
+
+happy 
+amused
+blissful
+charmed
+cheerful
+delighted
+eager
+enthusiastic
+excited
+glad
+gleeful
+joyful
+loving
+optimistic
+pleased
+
+good 
+amazing
+excellent
+exceptional
+fantastic
+marvelous
+outstanding
+pleasant
+splendid
+stupendous
+super
+terrific
+wonderful
+honorable
+virtuous
+
+funny 
+amusing
+comical
+droll
+entertaining
+gleeful
+hilarious
+humorous
+hysterical
+laughable
+ludicrous
+nonsensical
+sidesplitting
+whimsical
+
+bad 
+awful
+crummy
+despicable
+disgraceful
+dreadful
+horrible
+lousy
+nasty
+naughty
+outrageous
+rotten
+terrible
+unpleasant
+wicked
+
+small 
+diminutive
+little
+mini
+miniature
+minute
+petite
+skimpy
+slight
+tiny
+wee
+pocket-sized
+undersized
+puny
+
+important 
+consequential
+vital
+crucial
+decisive
+essential
+substantial
+extensive
+far-reaching
+fundamental
+great
+imperative
+key
+major
+significant
+
+rich 
+affluent
+deep-pocketed
+fat cat
+flush
+moneyed
+opulent
+prosperous
+wealthy
+well-fixed
+well-heeled
+well-to-do
+
+sad 
+blue
+cheerless
+sorrowful
+depressed
+desperate
+discouraged
+unhappy
+downcast
+frustrated
+gloomy
+hateful
+melancholy
+miserable
+somber
+
+kind 
+amiable
+attentive
+sympathetic
+benevolent
+kindhearted
+caring
+compassionate
+thoughtful
+considerate
+friendly
+generous
+gentle
+gracious
+nice
+
+attractive 
+alluring
+beautiful
+cute
+glamorous
+good-looking
+handsome
+lovely
+pretty
+stunning
+captivating
+appealing
+elegant
+eye-catching
+fascinating
+
+really 
+certainly
+easily
+genuinely
+honestly
+positively
+precisely
+truly
+undoubtedly
+unmistakably
+unquestionably
+verily
+genuinely
+admittedly
+indubitably
+
+very 
+absolutely
+acutely
+decidedly
+deeply
+eminently
+exceedingly
+excessively
+greatly
+highly
+noticeably
+particularly
+profoundly
+
+quickly 
+swiftly
+rapidly
+hurriedly
+speedily
+fast
+hastily
+briskly
+promptly
+immediately
+expeditiously
+instantaneously
+instantly
+directly
+apace
+
+seriously 
+honestly
+sincerely
+truly
+truthfully
+solemnly
+earnestly
+gravely
+soberly
+sternly
+thoughtfully
+severely
+critically
+acutely
+dangerously
+
+kindly 
+affectionately
+agreeably
+cordially
+generously
+graciously
+helpfully
+lovingly
+obligingly
+politely
+tenderly
+thoughtfully
+warmly
+affectionately
+innocently
+
+finally 
+eventually
+ultimately
+lastly
+summarily
+conclusively
+
+accidentally 
+casually
+inadvertently
+incidentally
+randomly
+unconsciously
+unexpectedly
+unintentionally
+unwittingly
+fortuitously
+
+perfectly 
+absolutely
+altogether
+completely
+entirely
+fully
+totally
+wholly
+thoroughly
+utterly
+superbly
+excellently
+flawlessly
+marvelously
+magnificently
+
+synonym 
+accomplish achieve
+reveal disclose
+status class
+acquire accumulate
+intelligent brilliant
+discount reduce
+close shut
+shame disgrace
+admit confess
+gather collect
+dubious doubtful
+nearly almost
+comfort consolation
+eager keen
+near close
+lively animated
+total complete
+earth soil
+annoy irritate
+peace harmony
+profitable lucrative
+answer reply
+confine restrict
+elevate promote
+conflict clash
+selfish narcissistic
+besides anyways
+important relevant
+agree concur
+submit comply
+stress emphasize
+connect join
+friend ally
+huge enormous
+opponent enemy
+passion love
+thoughtful considerate
+investigate inquire
+aromatic fragrant
+constant continuous
+fairness equity
+reach arrive
+modern contemporary
+especially particularly
+artful crafty
+opposite contrary
+primary fundamental
+meeting convention
+organization establishment
+guarantee assure
+convey communicate
+evaluate assess
+attractive appealing
+manage cope
+everlasting eternal
+absent lacking
+right correct
+exactly precisely
+terrible awful
+couch sofa
+except exclude
+backbone spine
+crook criminal
+start begin
+campaign crusade
+additional extra
+believable plausible
+dawn daybreak
+fabricate manufacture
+belly stomach
+deceptive misleading
+famous renowned
+beneficial favorable
+control regulate
+fanatic extremist
+weird bizarre
+dedicated committed
+fantastic brilliant
+innocent blameless
+defective faculty
+drift float
+massacre bloodbath
+planned deliberate
+foolish silly
+brave courageous
+perverted evil
+foretell predict
+branch department
+delicate fragile
+scarce rare
+deserted abandoned
+formerly previously
+business trade
+fate destiny
+lucky fortunate
+busy engaged
+detached indifferent
+foxy cunning
+categorize classify
+interested enthusiastic
+differentiate distinguish
+fragrance perfume
+chiefly mainly
+diminish decrease
+function operate
+choosy picky
+disappear vanish
+garbage rubbish
+chop cut
+disaster catastrophe
+glitter sparkle
+citation quotation
+deny disclaim
+grab seize
+midway halfway
+gratis free
+inflow incoming
+tip bonus
+casual informal
+mild gentle
+intestine gut
+rare infrequent
+imitate mimic
+innocent harmless
+senseless mindless
+hall corridor
+reduce minimize
+reflect mirror
+happy joyful
+instinct intuition
+misunderstand misconceive
+hard tough
+instructions directions
+miserable depressing
+hazard danger
+unbearable insufferable
+misery distress
+rumor hearsay
+insufficient inadequate
+mistrust distrust
+sealed airtight
+more increasing
+intellectual erudite
+rebel turncoat
+movie film
+tell hint
+intensify heighten
+murderer assassin
+stock inventory
+bare naked
+domestic home
+isolated lonely
+nameless anonymous
+murder homicide
+jealous envious
+napkin serviette
+hunger starvation
+joy delight
+story narrative
+knowingly deliberately
+local native
+rush hurry
+missing lacking
+necessary essential
+speculation hypothesis
+last final
+dusk nightfall
+leader chief
+appoint nominate
+tolerant liberal
+legal legitimate
+ignore disregard
+deadly lethal
+noon midday
+livable habitable
+demonstrate illustrate
+angry furious
+inform notify
+imagine assume
+awful lousy
+many numerous
+clear lucid
+stubborn unyielding
+immediate instant
+madness insanity
+powerful strong
+affect impact
+exaggerate magnify
+organic biological
+impediment obstacle
+maintain preserve
+decoration ornaments
+vital imperative
+artificial man-made
+outside external
+rude impolite
+model mannequin
+neglect overlook
+thoughtless inconsiderate
+cloth fabric
+abroad overseas
+undeniable indisputable
+maybe perhaps
+supervise oversee
+notorious infamous
+measure amount
+specific particular
+childish puerile
+meeting assembly
+insight perception
+infect contaminate
+merciless cruel
+poisonous toxic
+rigid inflexible
+opportunity possibility
+immaculate spotless
+law theory
+highlight spotlight
+virtue morals
+priority precedence
+steady stable
+silly stupid
+guarantee warranty
+imagine visualize
+praise compliment
+urgent pressing
+suggest propose
+vineyard winery
+previous former
+sundown sunset
+dawn sunrise
+withstand resist
+highest zenith
+immediate prompt
+sure certain
+come approach
+rich affluent
+environment surroundings
+leave depart
+provide supply
+represent symbolize
+run race
+tremble shiver
+mood temper
+rush hurry
+fair reasonable
+testimony evidence
+hide conceal
+landing touchdown
+dependable reliable
+sensitive delicate
+religious devout
+transform convert
+use consume
+comment remark
+get acquire
+memory remembrance
+have possess
+rest remainder
+temporary transitory
+trustworthy reliable
+interesting fascinating
+regret remorse
+pair duo
+final ultimate
+removable detachable
+uncommon unusual
+tell inform
+resume renew
+raw uncooked
+cry sob
+resign withdraw
+understandable comprehensible
+ask question
+reply respond
+unexpected unforeseen
+location area
+gross disgusting
+unlucky unfortunate
+part portion
+garbage trash
+illegal unlawful
+rude impolite
+unmarried single
+sure certain
+regret rue
+unspoken unstated
+popular famous
+shortage scarcity
+lie untrue
+clean neat
+delicious tasty
+strange unusual
+playful humorous
+mischievous harmful
+great grand
+rebellion defiance
+confident assured
+unclear vague
+appetizing savory
+valueless worthless
+conquer vanquish
+honest sincere
+amazing astonishing
+skull cranium
+differ vary
+ugly hideous
+dirty soiled
+huge vast
+trouble distress
+predicament dilemma
+genuine authentic
+dead lifeless
+lazy indolent
+awkward clumsy
+hurt damage
+planned deliberate
+amateur novice
+overjoyed exhilarated
+
+
+
+

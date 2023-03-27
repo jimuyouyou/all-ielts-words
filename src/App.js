@@ -93,7 +93,8 @@ function App() {
     }
   };
 
-  const handleGroupBlur = async (id) => {
+  const handleGroupBlur = async (e, id) => {
+    e.target.classList.remove('doubled');
     const doc = allData.find(it => it._id === id);
     await upsert(doc);
 
@@ -168,7 +169,8 @@ function App() {
                     <div key={groupInd} className='group-wrapper'>
                       <textarea value={group}
                         onChange={(e) => handleGroupChange(dt._id, e.target.value, groupInd)}
-                        onBlur={() => handleGroupBlur(dt._id)} />
+                        onDoubleClick={(e) => e.target.classList.add('doubled')}
+                        onBlur={(e) => handleGroupBlur(e, dt._id)} />
                     </div>
                   )
                 }

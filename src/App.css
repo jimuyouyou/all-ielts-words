@@ -43,6 +43,10 @@
   height: 200px;
 }
 
+.group-wrapper textarea.doubled:focus {
+  height: 1000px;
+}
+
 .tests-wrapper {
   margin-top: 30px;
   display   : flex;

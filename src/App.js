@@ -41,7 +41,7 @@ function App() {
         clone.unshift({
           _id: dbText,
           tag: dbText,
-          list: ['', '', ''],
+          list: ['', '', '', '', ''],
         });
         setAllData(clone);
       }
@@ -87,6 +87,9 @@ function App() {
     // console.log('handleGroupChange', [id, val, groupInd]);
     const clone = allData.slice();
     const doc = clone.find(it => it._id === id);
+    if(doc.list.length !== 5) {
+      for (let i = doc.list.length; i < 5; i++) doc.list.push('');
+    }
     if (doc) {
       doc.list[groupInd] = val;
       setAllData(clone);
@@ -94,7 +97,7 @@ function App() {
   };
 
   const handleGroupBlur = async (e, id) => {
-    e.target.classList.remove('doubled');
+    // e.target.classList.remove('doubled');
     const doc = allData.find(it => it._id === id);
     await upsert(doc);
 
@@ -169,7 +172,7 @@ function App() {
                     <div key={groupInd} className='group-wrapper'>
                       <textarea value={group}
                         onChange={(e) => handleGroupChange(dt._id, e.target.value, groupInd)}
-                        onDoubleClick={(e) => e.target.classList.add('doubled')}
+                        // onDoubleClick={(e) => e.target.classList.add('doubled')}
                         onBlur={(e) => handleGroupBlur(e, dt._id)} />
                     </div>
                   )

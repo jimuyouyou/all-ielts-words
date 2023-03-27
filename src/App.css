@@ -30,7 +30,7 @@
 
 
 .group-wrapper {
-  width : 33%;
+  width : 20%;
   border: 1px solid gray;
 }
 
@@ -40,12 +40,12 @@
 }
 
 .group-wrapper textarea:focus {
-  height: 200px;
-}
-
-.group-wrapper textarea.doubled:focus {
   height: 1000px;
 }
+
+/* .group-wrapper textarea.doubled:focus {
+  height: 1000px;
+} */
 
 .tests-wrapper {
   margin-top: 30px;

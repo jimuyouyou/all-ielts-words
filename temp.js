@@ -10,7 +10,7 @@ async function process() {
   const words = content.replace(/(?:\r\n|\r|\n)/g, ' ').split(/[ \:!\)\(\.\?;\,‘’“”]/);
   for (let j = 0; j < words.length; j++) {
     const word = words[j].trim();
-    if (/^[a-z]{3,}$/.test(word) || word.length > 3) {
+    if (/^[a-z]{3,}$/.test(word) && word.length >= 3) {
       all.add(word);
     } else {
       out.add(word);

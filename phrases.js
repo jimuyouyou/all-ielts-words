@@ -50,6 +50,15 @@ const excludeWords = new Set([
 
 // console.log(excludeWords);
 
+const notInclude = new Set(['0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+
+    // Punctuation
+    '.', ',', ';', ':', '!', '?', '"', "'", '`', '’',
+    '(', ')', '[', ']', '{', '}', '-', '_', '/',
+    '@', '#', '$', '%', '^', '&', '*', '+', '=', '\\',
+
+]);
+
 const getPhrases = async (passage) => {
     // Split the passage into lines using newlines and punctuation marks, then clean up
     const lines = passage.toLowerCase().trim().split(/[\n.?!]+/).map(line => line.trim()).filter(Boolean);
@@ -61,14 +70,21 @@ const getPhrases = async (passage) => {
         const words = line.split(/\s+/).filter(Boolean);
         // Generate all possible phrases of 2 or more words
         for (let i = 0; i < words.length - 1; i++) {
-            // Skip if the first word is in excludeWords or starts with punctuation/number
-            if (excludeWords.has(words[i]) || /^[\d\W]/.test(words[i])) continue;
+            // Skip if the first word is in excludeWords or notInclude or starts with punctuation/number
+            if (excludeWords.has(words[i]) || notInclude.has(words[i]) || /^[\d\W]/.test(words[i])) continue;
 
             for (let j = i + 1; j < words.length; j++) {
-                // Skip if the last word is in excludeWords or ends with punctuation/number
-                if (excludeWords.has(words[j]) || /[\d\W]$/.test(words[j])) continue;
+                // Skip if the last word is in excludeWords or notInclude or ends with punctuation/number
+                if (excludeWords.has(words[j]) || notInclude.has(words[j]) || /[\d\W]$/.test(words[j])) continue;
 
-                const phrase = words.slice(i, j + 1).join(' ');
+                // Check if any word in the phrase is in notInclude
+                const phraseWords = words.slice(i, j + 1);
+                if (phraseWords.some(word => notInclude.has(word))) continue;
+
+                const phrase = phraseWords.join(' ');
+                // Skip if phrase contains any characters or strings from notInclude
+                if (Array.from(notInclude).some(item => phrase.includes(item))) continue;
+
                 phrases[phrase] = (phrases[phrase] || 0) + 1;
             }
         }
@@ -79,7 +95,7 @@ const getPhrases = async (passage) => {
         .filter(([phrase, count]) => {
             const wordCount = phrase.split(' ').length;
             return (wordCount === 2 && count >= 3) ||
-                (wordCount >= 3 && count >= 2);
+                (wordCount >= 3 && count >= 3);
         })
         .sort(([a], [b]) => a.localeCompare(b))
         .reduce((acc, [phrase, count]) => {
@@ -114,6 +130,8 @@ const test = async () => {
     // Join all passages with newlines
     const combinedPassages = passages.join('\n\n');
     const phrases = await getPhrases(combinedPassages);
+    const sortedPhrases = Object.keys(phrases).sort((a, b) => b.length - a.length);
+    await fs.writeFile('./src/phrases.json', JSON.stringify(sortedPhrases));
     console.log(phrases);
     console.log('Total phrases:', Object.keys(phrases).length);
     console.log('Total files processed:', files.length);

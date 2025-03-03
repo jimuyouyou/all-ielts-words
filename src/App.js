@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import { getAll, upsert, remove } from './db.js';
 import tests from './tests.json';
+import phrases from './phrases.json';
 import { Hilitor } from './Hiltor';
 
 function getSentences(text) {
@@ -12,7 +13,7 @@ function getSentences(text) {
   tests.forEach(test => {
     test.paragraph.forEach((p, pInd) => {
       if (p.includes(text)) {
-        res.push({ name: test.name, paragraph: p, pInd});
+        res.push({ name: test.name, paragraph: p, pInd });
       }
     });
   });
@@ -87,7 +88,7 @@ function App() {
     // console.log('handleGroupChange', [id, val, groupInd]);
     const clone = allData.slice();
     const doc = clone.find(it => it._id === id);
-    if(doc.list.length !== 5) {
+    if (doc.list.length !== 5) {
       for (let i = doc.list.length; i < 5; i++) doc.list.push('');
     }
     if (doc) {
@@ -110,7 +111,7 @@ function App() {
     if (test) {
       setTest('');
     } else {
-      setTest(tests.find(t => t.name === testName).paragraph.join('<br/>'));
+      setTest(tests.find(t => t.name === testName).paragraph.join('<br/><br/>'));
     }
   };
 

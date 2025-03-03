@@ -21,7 +21,8 @@
 # Dev
 
 - update any files inside data folder
-- node index.js to compute words
+- node phrases.js to compute phrases
+- node index.js to compute words, and the aggregate the passages
 - node temp.js to compute unique words from temp.txt to tempUnique.txt
 - words.txt contains all valid word bigger than 2 characters(lowercase)
 - outliers.txt contains all invalid word

@@ -270,7 +270,6 @@ ardent
 are
 area
 areas
-aren
 argue
 argues
 argument
@@ -358,7 +357,6 @@ attitudes
 attract
 attracted
 attracting
-attraction
 attractions
 attractive
 attracts
@@ -869,7 +867,6 @@ clinic
 clip
 clips
 cloakroom
-clock
 close
 closed
 closely
@@ -1052,7 +1049,6 @@ considering
 consist
 consistency
 consolidation
-consoling
 constant
 constantly
 construct
@@ -1154,7 +1150,6 @@ cottage
 cottages
 cotton
 could
-couldn
 council
 councillors
 count
@@ -1285,7 +1280,6 @@ dealing
 dear
 death
 debate
-debtors
 decade
 decades
 deceptive
@@ -1309,7 +1303,6 @@ decorations
 decreases
 deep
 deeper
-deeply
 defence
 defend
 defines
@@ -1406,7 +1399,6 @@ diagrams
 diary
 did
 didgeridoo
-didn
 die
 died
 dies
@@ -1506,7 +1498,6 @@ documentary
 dodo
 dodos
 does
-doesn
 dog
 dogs
 doing
@@ -1518,7 +1509,6 @@ domestic
 domesticated
 dominance
 dominated
-don
 donated
 done
 door
@@ -1734,7 +1724,6 @@ environmentalists
 environmentally
 environments
 epic
-episode
 episodic
 equals
 equipment
@@ -2311,7 +2300,6 @@ habitat
 habitats
 habits
 had
-hadn
 hair
 hairdresser
 hairdryers
@@ -2350,7 +2338,6 @@ harsh
 harvest
 harvesting
 has
-hasn
 hatched
 hate
 hats
@@ -2695,7 +2682,6 @@ irrespective
 irrigation
 island
 islands
-isn
 isolation
 issue
 issues
@@ -2751,7 +2737,6 @@ kilos
 kind
 kindly
 kinds
-king
 kingfisher
 kings
 kit
@@ -3236,7 +3221,6 @@ musicals
 musician
 musicians
 must
-mustn
 myself
 mysterious
 mystery
@@ -3530,7 +3514,6 @@ papers
 parade
 paragraph
 parcel
-parent
 parents
 park
 parked
@@ -4157,7 +4140,6 @@ relevant
 reliability
 reliable
 relies
-religion
 rely
 remain
 remained
@@ -4544,7 +4526,6 @@ shellfish
 shells
 shelter
 sheltered
-shepherd
 shift
 shifting
 shining
@@ -4571,7 +4552,6 @@ shortly
 shot
 should
 shoulder
-shouldn
 shouted
 show
 showed
@@ -4898,11 +4878,9 @@ string
 stringed
 strip
 stripped
-strive
 stroll
 strong
 stronger
-structural
 structure
 structures
 struggled
@@ -5283,7 +5261,6 @@ transformation
 transformational
 transformed
 transforming
-transforms
 translated
 translating
 translation
@@ -5384,7 +5361,6 @@ understand
 understanding
 understood
 undertake
-undertaking
 underwater
 unearthed
 unemployed
@@ -5565,7 +5541,6 @@ wash
 washed
 washes
 washing
-wasn
 waste
 wasted
 wastes
@@ -5614,7 +5589,6 @@ wellbeing
 wells
 went
 were
-weren
 west
 western
 wet
@@ -5712,7 +5686,6 @@ worst
 worth
 worthwhile
 would
-wouldn
 wrecks
 write
 writer

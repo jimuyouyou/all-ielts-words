@@ -1,5 +1,7 @@
 const fs = require('fs').promises;
 const path = require('path');
+const phrases = require('./src/phrases.json');
+// console.log(phrases);
 
 const listeningPath = './data/listening';
 const readingPath = './data/reading';
@@ -28,8 +30,39 @@ function processGroup(freqGroup, content) {
   });
 }
 
+const A2J = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N'];
+const A2JS = ['A ', 'B ', 'C ', 'D ', 'E ', 'F ', 'G ', 'H ', 'I ', 'J ', 'K ', 'L ', 'M ', 'N ',
+  'A)', 'B)', 'C)', 'D)', 'E)', 'F)', 'G)', 'H)', 'I)', 'J)', 'K)', 'L)', 'M)', 'N)',
+  'A.', 'B.', 'C.', 'D.', 'E.', 'F.', 'G.', 'H.', 'I.', 'J.', 'K.', 'L.', 'M.', 'N.',
+];
 const getParagraphs = (content) => {
-  return content.split(/(?:\r\n|\r|\n)/g).filter(s => s.trim().length > 2);
+  const ps = content.split(/(?:\r\n|\r|\n)/g).filter(s => s.trim().length > 2);
+
+  ps.forEach((p, i) => {
+    let p1 = p.replace(/(?:\r\n|\r|\n)/g, ' ').trim();
+    if (p1.length < 50 && i == 0) p1 = '<h2>' + p1 + '</h2>';
+    else if (A2J.includes(p1)) p1 = '<b>' + p1 + '</b>';
+    else {
+      // starts with A, B, C, D, E, F, G, H, I, J, K, L, M, N
+      A2JS.forEach(prefix => {
+        if (p1.startsWith(prefix)) {
+          p1 = p1.replace(prefix, '<b>' + prefix + '</b> ');
+        }
+      });
+
+      // highlight phrases
+      for (const phrase of phrases) {
+        const regex = new RegExp(phrase, 'gi');
+        if (p1.toLowerCase().includes(phrase.toLowerCase())) {
+          p1 = p1.replace(regex, match => `<b>${match}</b>`);
+        }
+      }
+    }
+
+    ps[i] = p1;
+  });
+
+  return ps;
 };
 
 
@@ -102,6 +135,8 @@ async function process() {
   const groupData = Object.keys(freqGroup).filter(it => freqGroup[it] >= 5).sort();
   console.log('groupData', groupData.length);
   await fs.writeFile('./allWordGroups.txt', groupData.join('\n'));
+
+  console.log('phrases', phrases.length);
 
 }
 

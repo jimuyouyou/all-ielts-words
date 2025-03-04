@@ -20,6 +20,7 @@
 
 # Dev
 
+- copy allKeyWords.txt to myKeyWords.txt and then only remain those you are not sure to created styled text
 - update any files inside data folder
 - node phrases.js to compute phrases
 - node index.js to compute words, and the aggregate the passages

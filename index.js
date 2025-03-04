@@ -35,7 +35,7 @@ const A2JS = ['A ', 'B ', 'C ', 'D ', 'E ', 'F ', 'G ', 'H ', 'I ', 'J ', 'K ', 
   'A)', 'B)', 'C)', 'D)', 'E)', 'F)', 'G)', 'H)', 'I)', 'J)', 'K)', 'L)', 'M)', 'N)',
   'A.', 'B.', 'C.', 'D.', 'E.', 'F.', 'G.', 'H.', 'I.', 'J.', 'K.', 'L.', 'M.', 'N.',
 ];
-const getParagraphs = (content) => {
+const getParagraphs = (keyWords, content) => {
   const ps = content.split(/(?:\r\n|\r|\n)/g).filter(s => s.trim().length > 2);
 
   ps.forEach((p, i) => {
@@ -51,9 +51,18 @@ const getParagraphs = (content) => {
       });
 
       // highlight phrases
+      const ip1 = p1.toLowerCase();
       for (const phrase of phrases) {
         const regex = new RegExp(phrase, 'gi');
-        if (p1.toLowerCase().includes(phrase.toLowerCase())) {
+        if (ip1.includes(phrase.toLowerCase())) {
+          p1 = p1.replace(regex, match => `<b>${match}</b>`);
+        }
+      }
+
+      // highlight keywords
+      for (const phrase of keyWords) {
+        const regex = new RegExp(' ' + phrase + ' ', 'gi');
+        if (ip1.includes(phrase.toLowerCase())) {
           p1 = p1.replace(regex, match => `<b>${match}</b>`);
         }
       }
@@ -66,7 +75,7 @@ const getParagraphs = (content) => {
 };
 
 
-async function processFiles(freq, outs, freqGroup, dirPath, wordSet, tests, prefix) {
+async function processFiles(keyWords, freq, outs, freqGroup, dirPath, wordSet, tests, prefix) {
   const files = await fs.readdir(dirPath);
   for (let i = 0; i < files.length; i++) {
     const content = await fs.readFile(path.join(dirPath, files[i]), 'utf-8');
@@ -74,7 +83,7 @@ async function processFiles(freq, outs, freqGroup, dirPath, wordSet, tests, pref
 
     tests.push({
       name: `${prefix}/${path.parse(files[i]).name}`,
-      paragraph: getParagraphs(content)
+      paragraph: getParagraphs(keyWords, content)
     });
     const words = content.replace(/(?:\r\n|\r|\n)/g, ' ').split(/[ \:!\)\(\.\?\-;\,'''""]/);
     for (let j = 0; j < words.length; j++) {
@@ -97,11 +106,14 @@ async function process() {
   const freq = {};
   const freqGroup = {};
 
+  const myKeyWords = await fs.readFile('./myKeyWords.txt', 'utf-8');
+  const keyWords = myKeyWords.split(/(?:\r\n|\r|\n)/g).filter(s => s.trim()).sort((a, b) => b.length - a.length);
+  console.log('myKeyWords', keyWords.length);
 
-  await processFiles(freq, outs, freqGroup, listeningPathA, all, tests, 'ALS');
-  await processFiles(freq, outs, freqGroup, readingPathA, allReadings, tests, 'ARE');
-  await processFiles(freq, outs, freqGroup, listeningPath, all, tests, 'GLS');
-  await processFiles(freq, outs, freqGroup, readingPath, allReadings, tests, 'GRE');
+  await processFiles(keyWords, freq, outs, freqGroup, listeningPathA, all, tests, 'ALS');
+  await processFiles(keyWords, freq, outs, freqGroup, readingPathA, allReadings, tests, 'ARE');
+  await processFiles(keyWords, freq, outs, freqGroup, listeningPath, all, tests, 'GLS');
+  await processFiles(keyWords, freq, outs, freqGroup, readingPath, allReadings, tests, 'GRE');
 
   await fs.writeFile('./src/tests.json', JSON.stringify(tests));
 

@@ -3,8 +3,46 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import { getAll, upsert, remove } from './db.js';
 import tests from './tests.json';
-import phrases from './phrases.json';
 import { Hilitor } from './Hiltor';
+
+function fallbackCopyTextToClipboard(text) {
+  var textArea = document.createElement("textarea");
+  textArea.value = text;
+
+  // Avoid scrolling to bottom
+  textArea.style.top = "0";
+  textArea.style.left = "0";
+  textArea.style.position = "fixed";
+
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+
+  try {
+    var successful = document.execCommand('copy');
+    var msg = successful ? 'successful' : 'unsuccessful';
+    console.log('Fallback: Copying text command was ' + msg);
+  } catch (err) {
+    console.error('Fallback: Oops, unable to copy', err);
+  }
+
+  document.body.removeChild(textArea);
+}
+
+function copyTextToClipboard(html) {
+  const container = document.createElement('div');
+  container.innerHTML = html;
+
+  const blob = new Blob([container.innerHTML], { type: 'text/html' });
+  const clipboardItem = new ClipboardItem({ 'text/html': blob });
+
+  navigator.clipboard.write([clipboardItem]).then(function () {
+    console.log('Async: Copying to clipboard was successful!');
+  }, function (err) {
+    console.error('Async: Could not copy text: ', err);
+    fallbackCopyTextToClipboard(container.innerText);
+  });
+}
 
 function getSentences(text) {
   if (!text) return [];
@@ -107,12 +145,8 @@ function App() {
     setAllData(data);
   };
 
-  const handleTestToggle = (testName) => {
-    if (test) {
-      setTest('');
-    } else {
-      setTest(tests.find(t => t.name === testName).paragraph.join('<br/><br/>'));
-    }
+  const handleTestShow = (testName) => {
+    setTest(tests.find(t => t.name === testName).paragraph.join('<br/><br/>'));
   };
 
   // init data
@@ -190,7 +224,9 @@ function App() {
         {showSentences && showSentences.map((ss, tsInd) => {
           return (
             <div key={ss.name + ss.pInd} className='sent-wrapper' title={ss.name}>
-              {ss.paragraph} ({ss.name})
+              {/* <span dangerouslySetInnerHTML={{ __html: ss.paragraph }} /> */}
+              {ss.paragraph.replaceAll('<b>', '').replaceAll('</b>', '')}
+              ({ss.name})
             </div>
           )
         })}
@@ -201,15 +237,24 @@ function App() {
 
           return (
             <div key={ts.name} className='test'>
-              <button onClick={() => handleTestToggle(ts.name)}>{ts.name}</button>
+              <button onClick={() => handleTestShow(ts.name)}>{ts.name}</button>
             </div>
           )
         })}
       </div>
       <div className='test-panel'>
-        {!text && <div dangerouslySetInnerHTML={{ __html: test }} />}
+        {test &&
+          <div style={{ color: 'blue' }}>
+            <h3>
+              <button onClick={() => setTest('')}>HIDE THE PASSAGE</button> &nbsp;&nbsp;&nbsp;
+              <button onClick={() => copyTextToClipboard(document.getElementById('testContent').innerHTML)}>COPY THE PASSAGE</button>
+            </h3>
+          </div>
+        }
+
+        {!text && <div id="testContent" dangerouslySetInnerHTML={{ __html: test }} />}
       </div>
-    </div>
+    </div >
   );
 }
 

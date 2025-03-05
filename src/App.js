@@ -62,6 +62,7 @@ function getSentences(text) {
 
 function App() {
   const [test, setTest] = useState('');
+  const [testName, setTestName] = useState('');
   const [text, setText] = useState('');
   const [allData, setAllData] = useState([]);
 
@@ -146,6 +147,7 @@ function App() {
   };
 
   const handleTestShow = (testName) => {
+    setTestName(testName);
     setTest(tests.find(t => t.name === testName).paragraph.join('<br/><br/>'));
   };
 
@@ -252,6 +254,7 @@ function App() {
           </div>
         }
 
+        {testName && <h2>{testName}</h2>}
         {!text && <div id="testContent" dangerouslySetInnerHTML={{ __html: test }} />}
       </div>
     </div >

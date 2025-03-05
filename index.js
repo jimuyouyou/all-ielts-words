@@ -36,7 +36,7 @@ const A2JS = ['A ', 'B ', 'C ', 'D ', 'E ', 'F ', 'G ', 'H ', 'I ', 'J ', 'K ', 
   'A.', 'B.', 'C.', 'D.', 'E.', 'F.', 'G.', 'H.', 'I.', 'J.', 'K.', 'L.', 'M.', 'N.',
 ];
 const getParagraphs = (keyWords, content) => {
-  const ps = content.split(/(?:\r\n|\r|\n)/g).filter(s => s.trim().length > 2);
+  const ps = content.split(/(?:\r\n|\r|\n)/g).filter(s => s.trim().length > 0);
 
   ps.forEach((p, i) => {
     let p1 = p.replace(/(?:\r\n|\r|\n)/g, ' ').trim();

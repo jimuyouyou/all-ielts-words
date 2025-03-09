@@ -38,3 +38,8 @@
 # UI Dev
 
 - npm start
+
+# production
+- npm install -g serve
+- npm run build
+- serve -s build --listen 3009
